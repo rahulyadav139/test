@@ -1,3 +1,4 @@
+'use client';
 import { DrawerTrigger } from '@/modules/example/drawer-trigger';
 import { Box } from '@mui/material';
 

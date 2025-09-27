@@ -26,24 +26,24 @@ export const DrawerTrigger: React.FC = () => {
         onClick={handleButtonClick}
         startIcon={<MenuIcon />}
         sx={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
+          background: '#fff',
+          color: '#000',
           px: 4,
           py: 1.5,
           borderRadius: 3,
           fontSize: '1rem',
           fontWeight: 600,
           textTransform: 'none',
-          boxShadow: '0 8px 32px rgba(102, 126, 234, 0.3)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           '&:hover': {
-            background: 'linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%)',
+            background: '#eee',
             transform: 'translateY(-2px)',
-            boxShadow: '0 12px 40px rgba(102, 126, 234, 0.4)',
+            boxShadow: '0 12px 40px rgba(0,0,0,0.2)',
           },
           '&:active': {
             transform: 'translateY(0px)',
-            boxShadow: '0 4px 16px rgba(102, 126, 234, 0.3)',
+            boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
           },
         }}
         aria-label="Open navigation menu"
