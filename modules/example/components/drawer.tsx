@@ -17,13 +17,11 @@ import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 interface DrawerComponentProps {
   open: boolean;
   onClose: () => void;
-  anchorEl?: HTMLElement | null;
 }
 
 export const DrawerComponent = ({
   open,
   onClose,
-  anchorEl,
 }: DrawerComponentProps) => {
   const [currentLevel, setCurrentLevel] = useState<MenuItem[]>(menuItems);
   const [navigationStack, setNavigationStack] = useState<MenuItem[][]>([]);
@@ -125,7 +123,13 @@ export const DrawerComponent = ({
         </Box>
 
         {/* Menu Items */}
-        <Box sx={{ flex: 1, overflow: 'auto', background: 'transparent' }}>
+        <Box
+          sx={{
+            flex: 1,
+            background: 'transparent',
+            overflow: 'hidden',
+          }}
+        >
           <List sx={{ py: 1 }}>
             {currentLevel.map((item, index) => (
               <ListItem

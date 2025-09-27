@@ -7,16 +7,13 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 
 export const DrawerTrigger: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
-  const handleButtonClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
+  const handleButtonClick = () => {
     setDrawerOpen(true);
   };
 
   const handleDrawerClose = () => {
     setDrawerOpen(false);
-    setAnchorEl(null);
   };
 
   return (
@@ -53,11 +50,7 @@ export const DrawerTrigger: React.FC = () => {
         Open Menu
       </Button>
 
-      <DrawerComponent
-        open={drawerOpen}
-        onClose={handleDrawerClose}
-        anchorEl={anchorEl}
-      />
+      <DrawerComponent open={drawerOpen} onClose={handleDrawerClose} />
     </>
   );
 };
